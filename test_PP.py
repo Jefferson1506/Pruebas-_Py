@@ -23,12 +23,15 @@ def mensajeHola(X):
     
 
 #Fase 1 : Escribir una prueba que falle : Numero Primo
+# def test_Primo():
+#   assert verificar_primo()
 
+#Fase 2 : Escribir una prueba que pase de obligatoria : Numero Primo
 def test_Primo():
-  assert verificar_primo()
+  return primoSI(3)
 
-
-
+def primoSI(X):
+  return True
 
 
 

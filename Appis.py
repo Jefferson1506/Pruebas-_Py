@@ -13,6 +13,7 @@ def verificar_primo(n: str, response: Response):
     validacion = validaciones(n, "primo")
     if validacion != "Solicitud Exitosa":
         response.status_code = 400
+        ####3
         return {"validacion": validacion}
     
     respuesta = es_primo(n)
