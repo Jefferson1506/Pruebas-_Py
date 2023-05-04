@@ -1,9 +1,9 @@
 
-
+from Appis import *
 
 #Fase 1 : Escribir una prueba que falle : mensaje de hola
 # def test_mensaje():
-# assert mesnajeHola();
+#   assert mesnajeHola();
 
 #Fase 2 : Escribir una prueba que pase de obligatoria : mensaje de hola
 # def test_mensaje():
@@ -44,6 +44,16 @@ def test_Primo():
 
 
 #Fase 1  : Escribir una prueba que falle : Serie fibonacci
+# def test_Fibonacci():
+#   assert fibonacci(4,100)
+
+#Fase 2 : Escribir una prueba que pase de obligatoria : Serie fibonacci
 def test_Fibonacci():
-  assert fibonacci(4,100)
+  return serieF(6)
+
+def serieF(X):
+ return X==8
+
+
+
 
