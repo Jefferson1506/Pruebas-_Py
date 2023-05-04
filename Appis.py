@@ -46,6 +46,7 @@ def validaciones(x, type):
     
     if num >= 4.3466557686937455e+208 and type == "primo":
         return "Error: El valor introducido supera el limite: 4.3466557686937455e+208"
+   
     return "Solicitud Exitosa"
 
 

@@ -20,6 +20,13 @@ def mensajeHola(X):
     if X !=1 and X>0: 
       mensaje = "HOLIS PAPU LINDO"
       return mensaje
+    
+
+#Fase 1 : Escribir una prueba que falle : Numero Primo
+
+def test_Primo():
+  assert verificar_primo()
+
 
 
 
