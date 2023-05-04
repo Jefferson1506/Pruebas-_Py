@@ -8,6 +8,9 @@
 #     return"Hello FastAPI"
 
 #Fase 3 :Refactorización de la prueba : Mensaje de hola
+from Appis import verificar_primo
+
+
 def test_mensaje():
  a=mensajeHola(1)
  print(a)
@@ -27,11 +30,15 @@ def mensajeHola(X):
 #   assert verificar_primo()
 
 #Fase 2 : Escribir una prueba que pase de obligatoria : Numero Primo
-def test_Primo():
-  return primoSI(3)
+# def test_Primo():
+#   return primoSI(3)
 
-def primoSI(X):
-  return True
+# def primoSI(X):
+#   return True
+
+#Fase 3 :Refactorización de la prueba : Numero Primo
+def test_Primo():
+  assert verificar_primo(3,100)
 
 
 
