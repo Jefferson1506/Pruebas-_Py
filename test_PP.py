@@ -48,11 +48,16 @@ def test_Primo():
 #   assert fibonacci(4,100)
 
 #Fase 2 : Escribir una prueba que pase de obligatoria : Serie fibonacci
-def test_Fibonacci():
-  return serieF(6)
+# def test_Fibonacci():
+#   return serieF(6)
 
-def serieF(X):
- return X==8
+# def serieF(X):
+#  return X==8
+
+#Fase 3 :Refactorización de la prueba : Serie fibonacci
+def test_Fibonacci():
+  assert fibonacci(6,100)
+
 
 
 
