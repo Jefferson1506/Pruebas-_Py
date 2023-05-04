@@ -1,4 +1,6 @@
 
+
+
 #Fase 1 : Escribir una prueba que falle : mensaje de hola
 # def test_mensaje():
 # assert mesnajeHola();
@@ -8,7 +10,7 @@
 #     return"Hello FastAPI"
 
 #Fase 3 :Refactorización de la prueba : Mensaje de hola
-from Appis import verificar_primo
+
 
 
 def test_mensaje():
@@ -41,6 +43,7 @@ def test_Primo():
   assert verificar_primo(3,100)
 
 
-
-
+#Fase 1  : Escribir una prueba que falle : Serie fibonacci
+def test_Fibonacci():
+  assert fibonacci(4,100)
 
