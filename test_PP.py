@@ -1,5 +1,8 @@
 
 from Appis import *
+import pytest
+import json
+import requests
 
 #Fase 1 : Escribir una prueba que falle : mensaje de hola
 # def test_mensaje():
@@ -10,7 +13,6 @@ from Appis import *
 #     return"Hello FastAPI"
 
 #Fase 3 :Refactorización de la prueba : Mensaje de hola
-
 
 
 def test_mensaje():
@@ -59,6 +61,39 @@ def test_Fibonacci():
   assert fibonacci(6,100)
 
 
+# EndPoint : 
+
+ListaPrimoTest = [
+  (1,False), 
+  (2,True) , 
+  (3,True) , 
+  (4,False) , 
+  (5,False)
+  ]
+
+ListaSeriefTest= [
+(0, 0), 
+(1, 1),
+(2, 1),
+(3, 2), 
+(4, 3),
+(5, 5),    
+(6, 8)
+]
+
+@pytest.mark.parametrize("numero,expected",ListaPrimoTest)
+def test_primoEnd(numero,expected):
+    response = requests.post(f"http://127.0.0.1:8000/isPrime/{numero}")
+    repuesta = json.loads(response.content)
+    assert response.status_code ==200
+    assert repuesta["validacion"]=="Solicitud Exitosa"
+    assert repuesta["respuesta"]==expected
 
 
-
+@pytest.mark.parametrize("numero,expected",ListaSeriefTest)
+def test_primoEnd(numero,expected):
+    response = requests.post(f"http://127.0.0.1:8000/fibonacci/{numero}")
+    repuesta = json.loads(response.content)
+    assert response.status_code ==200
+    assert repuesta["validacion"]=="Solicitud Exitosa"
+    assert repuesta["respuesta"]==expected 

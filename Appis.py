@@ -1,8 +1,10 @@
 from typing import Union
-
 from fastapi import FastAPI,Response
 
 app = FastAPI()
+
+# para correr el programa uvicorn NOMBRE:app --reload
+#por si las mocas http://127.0.0.1:8000/docs
 
 @app.get('/hello')
 def index():
